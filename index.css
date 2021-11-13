@@ -1,0 +1,96 @@
+p{
+    margin:40px;
+    position:absolute;
+    z-index: 2; 
+}
+.background{
+    background-color: aqua;
+    height:500px;
+    width:700px;
+    margin: 50px;
+
+    position:absolute;
+    left:-200px;
+    animation-play-state: paused;
+}
+.hero
+{
+    height:50px;
+    width:50px;
+    background-color:blue;
+    animation-name: hero;
+    animation-duration:4s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    animation-timing-function: linear;
+     transform: translateY(230px); 
+    
+}
+.background:active .hero{
+  
+    animation-play-state:running;
+   
+}
+
+@keyframes hero {
+    0%{
+
+    }
+    50%{
+        transform: translateX(650px) translateY(230px);
+    }
+    100%{
+
+    }
+    
+}
+.enemy{
+    height:50px;
+    width:50px;
+    background-color:red;
+    
+   
+    
+}
+div:nth-child(2){
+    transform:translateX(200px) translateY(-50px);
+    animation-name: enemy1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes enemy1 {
+    0%{
+
+    }
+   
+    50%{
+       transform:  translateY(400px) translateX(200px);
+    }
+   
+    100%
+    {
+        
+    }
+}
+div:nth-child(3){
+    transform:translateX(400px) translateY(-100px);
+    animation-name: enemy2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes enemy2 {
+    0%{
+
+    }
+   
+    50%{
+       transform:  translateY(350px) translateX(400px);
+    }
+   
+    100%
+    {
+        
+    }
+}
